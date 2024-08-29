@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Pasteles deliciosos</title>
+    <link rel="icon" href="img/pastel_icon.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        .dark-mode .card {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        .dark-mode .navbar {
+            background-color: #2c3e50 !important;
+        }
+        .dark-mode .main-footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+        .fa-birthday-cake { color: #e74c3c; }
+        .fa-moon, .fa-sun { color: #f39c12; }
+        .main-sidebar {
+            width: 250px;
+        }
+        .content-wrapper {
+            margin-left: 250px;
+        }
+        .sidebar .nav-icon.fas.fa-home { color: #3498db; }
+        .sidebar .nav-icon.fas.fa-utensils { color: #e74c3c; }
+        .sidebar .nav-icon.fas.fa-cookie { color: #d35400; }
+        .sidebar .nav-icon.fas.fa-bread-slice { color: #f39c12; }
+        .sidebar .nav-icon.fas.fa-birthday-cake { color: #9b59b6; }
+        .sidebar .nav-icon.fas.fa-ice-cream { color: #1abc9c; }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .card-title {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .content-header h1 {
+            color: #3498db;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .image-container img {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .list-group-item {
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+        .list-group-item:hover {
+            background-color: #ecf0f1;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button id="darkModeToggle" class="btn btn-secondary">
+                        <i class="fas fa-moon"></i> Modo Oscuro
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="img/icati.jpeg" alt="Logo Gastronomía" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Delicias Culinarias</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Inicio</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Crepas.html" class="nav-link">
+                                <i class="nav-icon fas fa-utensils"></i>
+                                <p>Crepas Deliciosas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="churros.html" class="nav-link">
+                                <i class="nav-icon fas fa-cookie"></i>
+                                <p>Churros Crujientes</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bocadillos.html" class="nav-link">
+                                <i class="nav-icon fas fa-bread-slice"></i>
+                                <p>Bocadillos Gourmet</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pasteles.html" class="nav-link">
+                                <i class="nav-icon fas fa-birthday-cake"></i>
+                                <p>Pasteles Artesanales</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="postres.html" class="nav-link">
+                                <i class="nav-icon fas fa-ice-cream"></i>
+                                <p>Postres Irresistibles</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <h1 class="m-0">Pasteles Artesanales: Una Delicia Española</h1>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">El Arte de los Pasteles Artesanales</h2>
+                                    <p>Los pasteles artesanales, originarios de España, son una delicia suave y esponjosa que ha conquistado paladares en todo el mundo. Esta masa frita y azucarada se ha convertido en un postre icónico y versátil.</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 300px;">
+                                                <img src="img/WhatsApp Image 2024-08-28 at 7.28.51 AM (1).jpeg" alt="El arte de los churros 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 300px;">
+                                                <img src="img/WhatsApp Image 2024-08-28 at 7.28.51 AM.jpeg" alt="El arte de los churros 2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Ingredientes Mágicos</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">200g de harina de trigo</li>
+                                        <li class="list-group-item">150g de azúcar</li>
+                                        <li class="list-group-item">2 huevos</li>
+                                        <li class="list-group-item">120ml de aceite vegetal</li>
+                                        <li class="list-group-item">180ml de leche</li>
+                                        <li class="list-group-item">1 cucharadita de extracto de vainilla</li>
+                                        <li class="list-group-item">2 cucharaditas de polvo de hornear</li>
+                                        <li class="list-group-item">1 pizca de sal</li>
+                                        <li class="list-group-item">Ralladura de 1 limón (opcional)</li>
+                                    </ul>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 200px;">
+                                                <img src="img/pastel1.png" alt="Ingredientes churros 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 200px;">
+                                                <img src="img/pastel2.png" alt="Ingredientes churros 2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Pasos para la Perfección</h3>
+                                    <hr>
+                                    <ol class="list-group list-group-numbered">
+                                        <li class="list-group-item">Precalienta el horno a 180°C y engrasa un molde para pastel.</li>
+                                        <li class="list-group-item">En un bol grande, mezcla la harina, el azúcar, el polvo de hornear y la sal.</li>
+                                        <li class="list-group-item">En otro bol, bate los huevos, el aceite, la leche y la vainilla.</li>
+                                        <li class="list-group-item">Incorpora los ingredientes líquidos a los secos y mezcla hasta obtener una masa homogénea.</li>
+                                        <li class="list-group-item">Vierte la masa en el molde preparado.</li>
+                                        <li class="list-group-item">Hornea durante 30-35 minutos o hasta que al insertar un palillo salga limpio.</li>
+                                        <li class="list-group-item">Deja enfriar completamente antes de decorar.</li>
+                                        <li class="list-group-item">Cubre con tu frosting favorito y decora al gusto.</li>
+                                    </ol>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 200px;">
+                                                <img src="img/pastel3.png" alt="Preparación pastel 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 200px;">
+                                                <img src="img/pastel4.png" alt="Preparación pastel 2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Variaciones y Decoraciones de Pasteles Artesanales</h3>
+                                    <p>Los pasteles artesanales ofrecen infinitas posibilidades de personalización:</p>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Clásico: Pastel de vainilla con frosting de buttercream</li>
+                                        <li class="list-group-item">Gourmet: Pastel de chocolate negro con ganache y frutos rojos</li>
+                                        <li class="list-group-item">Tropical: Pastel de coco y piña con crema de maracuyá</li>
+                                        <li class="list-group-item">Festivo: Pastel de zanahoria con frosting de queso crema y nueces</li>
+                                        <li class="list-group-item">Vegano: Pastel de almendras y limón sin ingredientes de origen animal</li>
+                                    </ul>
+                                    <p class="mt-3">Recuerda, la clave está en usar ingredientes frescos y de calidad. ¡Disfruta creando y saboreando estas delicias artesanales!</p>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 300px;">
+                                                <img src="img/pastel5.jpeg" alt="Pastel de chocolate">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="image-container" style="height: 300px;">
+                                                <img src="img/pastel6.jpg" alt="Pastel de frutas">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>&copy; 2023 Delicias Culinarias - El Arte de los Churros.</strong> Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Verificar si el modo oscuro está activado en localStorage
+            if (localStorage.getItem('darkMode') === 'true') {
+                $('body').addClass('dark-mode');
+                $('.navbar').addClass('navbar-dark').removeClass('navbar-light');
+                $('.card').addClass('bg-dark');
+                $('#darkModeToggle').html('<i class="fas fa-sun"></i> Modo Claro');
+            }
+
+            $('#darkModeToggle').click(function() {
+                $('body').toggleClass('dark-mode');
+                $('.navbar').toggleClass('navbar-dark navbar-light');
+                $('.card').toggleClass('bg-dark');
+                if ($('body').hasClass('dark-mode')) {
+                    $(this).html('<i class="fas fa-sun"></i> Modo Claro');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    $(this).html('<i class="fas fa-moon"></i> Modo Oscuro');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

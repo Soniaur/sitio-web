@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres Irresistibles</title>
+    <link rel="icon" href="img/bocadillo_icon.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AdminLTE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .dark-mode {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        .dark-mode .card {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        .dark-mode .navbar {
+            background-color: #2c3e50 !important;
+        }
+        .dark-mode .main-footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+        .fa-birthday-cake { color: #e74c3c; }
+        .fa-moon, .fa-sun { color: #f39c12; }
+        .main-sidebar {
+            width: 250px;
+        }
+        .content-wrapper {
+            margin-left: 250px;
+        }
+        .sidebar .nav-icon.fas.fa-home { color: #3498db; }
+        .sidebar .nav-icon.fas.fa-utensils { color: #e74c3c; }
+        .sidebar .nav-icon.fas.fa-cookie { color: #d35400; }
+        .sidebar .nav-icon.fas.fa-bread-slice { color: #f39c12; }
+        .sidebar .nav-icon.fas.fa-birthday-cake { color: #9b59b6; }
+        .sidebar .nav-icon.fas.fa-ice-cream { color: #1abc9c; }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .card-title {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .content-header h1 {
+            color: #3498db;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .image-container img {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .list-group-item {
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+        .list-group-item:hover {
+            background-color: #ecf0f1;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+         <!-- Navbar -->
+         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button id="darkModeToggle" class="btn btn-secondary">
+                        <i class="fas fa-moon"></i> Modo Oscuro
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="img/icati.jpeg" alt="Logo Gastronomía" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Delicias Culinarias</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Inicio</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Crepas.html" class="nav-link">
+                                <i class="nav-icon fas fa-utensils"></i>
+                                <p>Crepas Deliciosas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="churros.html" class="nav-link">
+                                <i class="nav-icon fas fa-cookie"></i>
+                                <p>Churros Crujientes</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bocadillos.html" class="nav-link">
+                                <i class="nav-icon fas fa-bread-slice"></i>
+                                <p>Bocadillos Gourmet</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pasteles.html" class="nav-link">
+                                <i class="nav-icon fas fa-birthday-cake"></i>
+                                <p>Pasteles Artesanales</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="postres.html" class="nav-link">
+                                <i class="nav-icon fas fa-ice-cream"></i>
+                                <p>Postres Irresistibles</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <h1 class="m-0">Postres Irresistibles: Un Delicioso Final</h1>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">Postres Deliciosos</h2>
+                                    <br>
+                                    <p>Los postres son el broche de oro de cualquier comida. Estas creaciones dulces son una expresión de creatividad culinaria que combina sabores, texturas y presentaciones únicas para deleitar los paladares más exigentes.</p>
+                                    <p>Desde los clásicos hasta las innovaciones modernas, los postres ofrecen un mundo de posibilidades para satisfacer todos los gustos y ocasiones.</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="image-container">
+                                                <img src="img/flan1.png" alt="Postre delicioso 1" class="img-fluid mb-3">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="image-container">
+                                                <img src="img/flan2.png" alt="Postre delicioso 2" class="img-fluid mb-3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Postres Rápidos</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Yogur griego con miel y nueces</li>
+                                        <li class="list-group-item">Fruta fresca cortada con un toque de limón</li>
+                                        <li class="list-group-item">Batido de plátano y fresa</li>
+                                        <li class="list-group-item">Galletas con helado</li>
+                                        <li class="list-group-item">Mug cake de chocolate (pastel en taza)</li>
+                                        <li class="list-group-item">Plátano asado con canela y miel</li>
+                                    </ul>
+                                    <div class="text-center mt-3">
+                                        <div class="image-container">
+                                            <img src="img/gelatina1.png" alt="Postre rápido 2" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">El Postre Perfecto</h3>
+                                    <hr>
+                                    <ol class="list-group list-group-numbered">
+                                        <li class="list-group-item">Prepara la base de galleta: tritura galletas y mezcla con mantequilla derretida.</li>
+                                        <li class="list-group-item">Presiona la mezcla en el fondo de un molde y refrigera por 30 minutos.</li>
+                                        <li class="list-group-item">Prepara la capa de vainilla: mezcla leche, azúcar, y esencia de vainilla. Cocina hasta espesar.</li>
+                                        <li class="list-group-item">Vierte la capa de vainilla sobre la base de galleta y refrigera por 2 horas.</li>
+                                        <li class="list-group-item">Prepara la capa de fresa: mezcla fresas trituradas con azúcar y gelatina. Vierte sobre la capa de vainilla.</li>
+                                        <li class="list-group-item">Prepara la capa de chocolate: derrite chocolate con crema y vierte sobre la capa de fresa.</li>
+                                        <li class="list-group-item">Refrigera el postre por al menos 4 horas antes de servir.</li>
+                                    </ol>
+                                    <div class="text-center mt-3">
+                                        <div class="image-container">
+                                            <img src="img/gelatina2.png" alt="Preparación bocadillos 2" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <h3 class="card-title">Gelatina Irresistible</h3>
+                                        <p>Explora estas deliciosas combinaciones para elevar tus Gelatinas al siguiente nivel:</p>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Base de galleta: Triturar galletas y mezclar con mantequilla derretida</li>
+                                            <li class="list-group-item">Capa de gelatina de fresa: Disolver gelatina en agua caliente y agregar fresas picadas</li>
+                                            <li class="list-group-item">Capa de crema: Batir crema, azúcar y vainilla hasta que esté firme</li>
+                                            <li class="list-group-item">Capa de gelatina de limón: Preparar gelatina de limón según las instrucciones del paquete</li>
+                                            <li class="list-group-item">Decoración: Agregar frutas frescas y crema batida en la parte superior</li>
+                                        </ul>
+                                        <p class="mt-3">Recuerda, la presentación es clave. Corta tus Gelatinas en formas atractivas y decora el plato con hierbas frescas o reducción de balsámico para una experiencia visual y gustativa completa.</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="image-container">
+                                                    <img src="img/gelatina3.png" alt="Postres 3" class="img-fluid mb-3">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="image-container">
+                                                    <img src="img/gelatina4.png" alt="Postres 4" class="img-fluid mb-3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <strong>&copy; 2023 Delicias Culinarias - El Arte de los Postres Irresistibles.</strong> Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Verificar si el modo oscuro está activado en localStorage
+            if (localStorage.getItem('darkMode') === 'true') {
+                $('body').addClass('dark-mode');
+                $('.navbar').addClass('navbar-dark').removeClass('navbar-light');
+                $('.card').addClass('bg-dark');
+                $('#darkModeToggle').html('<i class="fas fa-sun"></i> Modo Claro');
+            }
+
+            $('#darkModeToggle').click(function () {
+                $('body').toggleClass('dark-mode');
+                $('.navbar').toggleClass('navbar-dark navbar-light');
+                $('.card').toggleClass('bg-dark');
+                if ($('body').hasClass('dark-mode')) {
+                    $(this).html('<i class="fas fa-sun"></i> Modo Claro');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    $(this).html('<i class="fas fa-moon"></i> Modo Oscuro');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
